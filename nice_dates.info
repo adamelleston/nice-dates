@@ -1,0 +1,7 @@
+name = Nice dates
+description = Provides some date formats and date types, that are designed to help create more date friendly URLs such as "blog/2012/01/23/[node:title]"
+package = Precedent
+core = 7.x
+version = 7.x-1.0
+files[] = nice_dates.module
+

@@ -1,0 +1,48 @@
+<?php
+/**
+ * @file
+ *
+ * Creates some date formats and types that can be used to create nice date friendly URLs
+ *
+ * An example would be setting a blog URL pattern in pathauto to
+ * blog/[node:created:nice_dates_year]/[node:created:nice_dates_month]/[node:created:nice_dates_day]/[node:title]
+ * This would create something like blog/2012/07/04/node-title-goes-here
+ *
+ */
+
+
+/**
+ * Implements hook_date_formats().
+ */
+function nice_dates_date_formats() {
+  return array(
+    array(
+      'type' => 'nice_dates_year',
+      'format' => 'Y',
+      'locales' => array(),
+    ),
+    array(
+      'type' => 'nice_dates_month',
+      'format' => 'm',
+      'locales' => array(),
+    ),
+    array(
+      'type' => 'nice_dates_day',
+      'format' => 'd',
+      'locales' => array(),
+    ),
+  );
+}
+
+
+/**
+ * Implements hook_date_format_types().
+ */
+function nice_dates_date_format_types() {
+  // Define the core date format types.
+  return array(
+    'nice_dates_year' => t('Year'),
+    'nice_dates_month' => t('Month'),
+    'nice_dates_day' => t('Day'),
+  );
+}
